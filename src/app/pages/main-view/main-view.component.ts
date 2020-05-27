@@ -45,4 +45,15 @@ export class MainViewComponent implements OnInit {
     }
   }
 
+  addTask(column){
+    let task = window.prompt("Add new card.");
+    column.tasks.push(task);
+  }
+
+  addList(){
+    let list = window.prompt("Add new list.");
+    let newColumn = new Column(list, []);
+    this.board.columns.push(newColumn);
+  }
+
 }
